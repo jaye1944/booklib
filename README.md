@@ -9,3 +9,8 @@ book store library
 ~~~
 sudo apt-get install libsqlite3-dev
 ~~~
+
+### Install ncruses libs
+~~~
+sudo apt-get install libncurses5-dev
+~~~
