@@ -2,6 +2,7 @@
 #sudo sed -i -e 's/archive.ubuntu.com\|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
 #sudo apt-get install parcellite
 #http://tldp.org/HOWTO/NCURSES-Programming-HOWTO/intro.html
+#http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
 if [ $# -eq 0 ];
 then
 	echo "Usage is ./compile.sh [option]"
