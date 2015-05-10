@@ -1,2 +1,4 @@
-pp
-books
+src/books.db
+obj/
+bin/
+lib/
