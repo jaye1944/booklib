@@ -10,21 +10,31 @@ then
 	tput setaf 3
 	echo "Usage is ./compile.sh [option]"
 	echo "Compile with sqlite './compile.sh s'"
-	echo "Compile with ncurses './compile.sh n'"
+	#echo "Compile with ncurses './compile.sh n'"
 	tput sgr0
 	exit 0
 fi
 
 if [ $1 = "s" ];
 then
-echo "#### compiling with sqlite#### "
-gcc -Wall main.c -lsqlite3 -o pp
+tput setaf 2
+echo "#### Running with sqlite#### "
+tput sgr0
+./bin/mycc
+#gcc -Wall main.c -lsqlite3 -o pp
 #gcc -Wall create.c -lsqlite3 -o pp
 fi
 
-if [ $1 = "n" ];
-then
-echo "#### compiling with ncurses#### "
-gcc -Wall nmain.c -lncurses -o pp
-fi
-
+#if [ $1 = "n" ];
+#then
+#echo "#### compiling with ncurses#### "
+#gcc -Wall nmain.c -lncurses -o pp
+#fi
+#0	Black
+#1	Red
+#2	Green
+#3	Yellow
+#4	Blue
+#5	Magenta
+#6	Cyan
+#7	White

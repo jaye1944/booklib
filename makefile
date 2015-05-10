@@ -4,7 +4,7 @@ CC = gcc
 ODIR = obj
 SDIR = src
 INC = -I include
-CFLAGS = -Wall -g
+CFLAGS = -Wall
 LFLAGS = -L lib
 LIBS = -lsqlite3
 

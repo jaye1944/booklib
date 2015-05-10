@@ -15,7 +15,7 @@ static int callback(void *NotUsed, int argc, char **argv, char **azColName){
     sqlite3 *db;
     char *zErrMsg = 0;
     int rc;
-    printf("%s\n", DB );
+    printf("%s\n ", DB );
     if( argc!=3 ){
       fprintf(stderr, "Usage: %s DATABASE SQL-STATEMENT\n", argv[0]);
       return(1);

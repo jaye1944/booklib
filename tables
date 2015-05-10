@@ -1,0 +1,14 @@
+Book
+| Id | Book_Id | Name | Author | Price | Purchase_Date | *Status | *Place | Have | Comments | #10
+
+Borrow
+| Id | *U_Id | Br_date | Re_date | Du_Date | #5
+
+*Status
+| Id | Type | #2
+
+*Place 
+| Id | Name | Address | #3
+
+*Users
+| Id | Name | Role | #3
