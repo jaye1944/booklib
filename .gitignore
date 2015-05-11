@@ -2,3 +2,6 @@ src/books.db
 obj/
 bin/
 lib/
+.cproject
+.project
+.settings/

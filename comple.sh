@@ -1,4 +1,3 @@
-#sudo apt-get  install libsqlite3-dev
 #sudo sed -i -e 's/archive.ubuntu.com\|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
 #sudo apt-get install parcellite
 #http://tldp.org/HOWTO/NCURSES-Programming-HOWTO/intro.html
