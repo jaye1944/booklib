@@ -8,7 +8,7 @@ CFLAGS = -Wall
 LFLAGS = -L lib
 LIBS = -lsqlite3
 
-_OBJS = main.o
+_OBJS = main.o persist.o
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
 
 
