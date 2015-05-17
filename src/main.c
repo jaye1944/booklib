@@ -40,7 +40,7 @@ int main(int argc, char **argv) {
 		fgets(word, 2, stdin);
 		if ((toupper(word[0]) == YES) && (createDb())) {
 			printf("%s %s\n", DB, CREATEDSUCC);
-			printf("%s %s\n", "BOOK table", CREATEDSUCC);
+			printf("%s %s\n", "All tables", CREATEDSUCC);
 		} else {
 			exit(0);
 		}
