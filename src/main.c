@@ -45,7 +45,12 @@ int main(int argc, char **argv) {
 			exit(0);
 		}
 	} else {
-
+		printf("%s",OPTIONS1);
+		system("tput setaf 2");
+		printf("%s",OPTIONS2);
+		system("tput setaf 1");
+		printf("%s",OPTIONEXIT);
+		system("tput sgr0");
 	}
 
 	//char *zErrMsg = 0;

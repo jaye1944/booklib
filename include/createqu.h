@@ -14,22 +14,49 @@
 "HAVE           INT,"\
 "COMMENT        TEXT);"
 
+typedef struct Books {
+	int book_id;
+	char book_given_id[10];
+	char name[100];
+	char author[50];
+	double price;
+	char date[25];
+	int status_id;
+	int place_id;
+	int have;
+	char comment[200];
+} Book;
+
 //Borrow
-//| Id | *U_Id | *B_Id | Br_date | Re_date | Du_Date | #5
+//| Id | *U_Id | *B_Id | Br_date | Re_date | Du_Date | #6
 
 #define BORROW_QU "CREATE TABLE BORROW("\
 "ID INT PRIMARY KEY     NOT NULL,"\
-"U_ID			INT,"\
-"B_ID			INT,"\
-"BR_DATE		DATE,"\
-"RT_DATE		DATE,"\
-"DU_DATE		DATE);"
+"USER_ID			INT,"\
+"BOOK_ID			INT,"\
+"BORROW_DATE		DATE,"\
+"RETURN_DATE		DATE,"\
+"DUE_DATE		DATE);"
+
+typedef struct Borrows {
+	int borrow_id;
+	int user_id;
+	int book_id;
+	char borrow_date[25];
+	char return_date[25];
+	char due_date[25];
+} Borrow;
 
 //*Status
 //| Id | Type |
 #define STATUS_QU "CREATE TABLE STATUS("\
 "ID INT PRIMARY KEY     NOT NULL,"\
 "Type			CHAR(10));"
+
+typedef struct Statuss {
+	int status_id;
+	char type[10];
+} Status;
 
 //*Place
 //| Id | Name | Address |
@@ -38,11 +65,24 @@
 "NAME			CHAR(50),"\
 "ADDRESS		CHAR(100));"
 
+typedef struct Places {
+	int place_id;
+	char name[50];
+	char address[100];
+} Place;
+
+
 //*Users
 //| Id | Name | Role |
 #define USERS_QU "CREATE TABLE USERS("\
 "ID INT PRIMARY KEY     NOT NULL,"\
 "NAME			CHAR(50),"\
 "ROLE			INT);"
+
+typedef struct Users {
+	int user_id;
+	char name[50];
+	int role;
+} User;
 
 #endif /* CREATEQU_H_ */
