@@ -7,12 +7,18 @@
 #define NODB "No database exist"
 #define NEEDTOCREATE "Do you want to create new DB..? [y/n]"
 #define CREATEDSUCC "created successfully..!!"
-#define CNTCREATE "Can,t create DB"
-#define OPTIONS1 "\t \t [1]\t Book\n "\
-	"\t \t [2]\t Place\n "\
-	"\t \t [3]\t User\n "\
-	"\t \t [3]\t Status\n "
-#define OPTIONS2 "\t \t [a]\t Add new\n"\
+#define CNTCREATE "Can't create DB"
+
+#define SQLERROR "SQL error: "
+
+#define SHOW_BOOK_COUNT "\t \t [1]\t Book \t\t"
+#define SHOW_PLACE_COUNT "\t \t [2]\t Place \t\t"
+#define SHOW_USER_COUNT "\t \t [3]\t User \t\t"
+#define SHOW_STATUS_COUNT "\t \t [4]\t Status \t"
+#define SHOW_BORROW_COUNT "\t \t [5]\t Borrow \t"
+
+#define OPTIONS2 "\t \t [v]\t View all\n"\
+	"\t \t [a]\t Add new\n"\
 	"\t \t [d]\t Delete existing\n"\
 	"\t \t [e]\t Edit existing\n"
 #define OPTIONEXIT "\t \t [x]\t exit\n"

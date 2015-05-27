@@ -6,7 +6,6 @@
 //project includes
 #include <persist.h>
 
-
 int createDb() {
 	int cr;
 	cr = sqlite3_open(DB, &db);
@@ -45,7 +44,10 @@ int main(int argc, char **argv) {
 			exit(0);
 		}
 	} else {
-		printf("%s",OPTIONS1);
+		sqlite3_open(DB, &db);
+		countTableValues();
+		sqlite3_close(db);
+		//printf("%s",OPTIONS1);
 		system("tput setaf 2");
 		printf("%s",OPTIONS2);
 		system("tput setaf 1");

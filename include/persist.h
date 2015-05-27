@@ -4,11 +4,14 @@
 #include <createqu.h>
 #include <property.h>
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 //Global
 sqlite3 *db;
 
 int creatBookTable(char *zErrMsg);
+int countTableValues();
 
 #endif /* PERSIST_H_ */
 

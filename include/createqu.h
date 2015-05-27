@@ -1,8 +1,10 @@
 #ifndef CREATEQU_H_
 #define CREATEQU_H_
+#define NUMOFTABLES 5
 //Book
 //| Id | Book_Id | Name | Author | Price | Purchase_Date | *Status | *Place | Have | Comments |
-#define BOOK_Qu "CREATE TABLE BOOK("\
+#define TBOOK "BOOK"
+#define BOOK_QU "CREATE TABLE BOOK("\
 "ID INT PRIMARY KEY     NOT NULL,"\
 "BOOK_ID        CHAR(10),"\
 "NAME           CHAR(100),"\
@@ -29,7 +31,7 @@ typedef struct Books {
 
 //Borrow
 //| Id | *U_Id | *B_Id | Br_date | Re_date | Du_Date | #6
-
+#define TBORROW "BORROW"
 #define BORROW_QU "CREATE TABLE BORROW("\
 "ID INT PRIMARY KEY     NOT NULL,"\
 "USER_ID			INT,"\
@@ -49,6 +51,7 @@ typedef struct Borrows {
 
 //*Status
 //| Id | Type |
+#define TSTATUS "STATUS"
 #define STATUS_QU "CREATE TABLE STATUS("\
 "ID INT PRIMARY KEY     NOT NULL,"\
 "Type			CHAR(10));"
@@ -60,6 +63,7 @@ typedef struct Statuss {
 
 //*Place
 //| Id | Name | Address |
+#define TPLACE "PLACE"
 #define PLACE_QU "CREATE TABLE PLACE("\
 "ID INT PRIMARY KEY     NOT NULL,"\
 "NAME			CHAR(50),"\
@@ -71,9 +75,10 @@ typedef struct Places {
 	char address[100];
 } Place;
 
-
+//SELECT name FROM sqlite_master WHERE type='table';
 //*Users
 //| Id | Name | Role |
+#define TUSERS "USERS"
 #define USERS_QU "CREATE TABLE USERS("\
 "ID INT PRIMARY KEY     NOT NULL,"\
 "NAME			CHAR(50),"\
@@ -84,5 +89,7 @@ typedef struct Users {
 	char name[50];
 	int role;
 } User;
+
+#define COUNT_QU "SELECT COUNT(ID) FROM "
 
 #endif /* CREATEQU_H_ */
